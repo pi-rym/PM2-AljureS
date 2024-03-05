@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat+Subrayada:wght@400;700&family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat+Subrayada:wght@400;700&family=Rubik+Mono+One&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 body{
     background-color: rgb(255, 255, 255);
@@ -11,6 +12,16 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+p{
+    font-family: "Source Sans 3", sans-serif;
+    padding: 1px;
+}
+
+h3{
+    font-family: "Montserrat Subrayada", sans-serif;
+    font-weight: 450;
+    font-size: 1em;
 }
 
 nav{
@@ -46,11 +57,55 @@ nav{
 }
 #barraDeNavegacionPrincipal ul li a:hover{
     text-decoration: none;
+    border: 1px solid rgb(128, 128, 128);
     color: black;
-    font-weight: bolder; 
+    font-weight: 900; 
 }
 
 #allMoviesCards{
+    margin-top: 2em;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.card__content {
+    padding-top: 10px ;
+    box-sizing: border-box;
+    width: 250px;
+    height: fit-content;
+    background: rgba(217, 217, 217, 0.58);
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    /* backdrop-filter: blur(6px); */
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    
+    user-select: none;
+    /* font-weight: bolder; */
+    color: black;
+}
+
+.card__content:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+}
+
+.card__content:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+}
+
+
+.imageMovies{
+    height: 300px;
+}
+
+footer{
+    font-family: "Source Sans 3", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2em;
 }

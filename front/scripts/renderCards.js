@@ -12,7 +12,7 @@ function renderFilms(pelicula) {
         <p class="card__title">${pelicula.year}</p>
         <p class="card__title">${pelicula.director}</p>
         <p class="card__title">${pelicula.genre.join(', ')}</p>
-        <p class="card__title">${pelicula.rate} Duration: ${pelicula.duration}</p>
+        <p class="card__title">${pelicula.rate} - Duration: ${pelicula.duration}</p>
         <img class="imageMovies" src="${pelicula.poster}">
     `
     seccionPeliculas.appendChild(peliculaElemento)

@@ -1,7 +1,9 @@
 const app = require("./src/server.js")
 
-app.listen(3000, ()=>{
-    console.log("Server for Porject M2 working fine in port 3000");
+const PORT = 3000
+
+app.listen(PORT, ()=>{
+    console.log(`Server for Porject M2 working fine in port ${PORT}`);
 })
 
 /*

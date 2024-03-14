@@ -1,5 +1,5 @@
-const {getMovies} = require("./moviesController")
+const { getMovies }  = require("./moviesController")
 
 module.exports ={
     getMovies
-}
+} 

@@ -20,9 +20,9 @@
         <nav id="barraDeNavegacionPrincipal">
             <ul>
                 <li><a href="../index.html">MOVIES</a></li>
-                <li><a href="./addMovie.html">ADD MOVIE</a></li>
+                <li><a class="btn btn-secondary disabled" role="button" aria-disabled="true">ADD MOVIE</a></li>
                 <li><a href="./popular.html">RECOMMENDATION</a></li>
-                <li><a class="btn btn-secondary disabled" role="button" aria-disabled="true">ABOUT THIS PROJECT</a></li>
+                <li><a href="./about.html">ABOUT THIS PROJECT</a></li>
                 <img id="logo" src="../styles/images/logo.png" alt="">
             </ul>
         </nav>
@@ -33,6 +33,32 @@
         <main>
             <section id="mainSection">
                 
+            </section>
+
+            <section id="addMovieSection">
+                <form class="formAddMovie">
+                    <div class="titleForm">Welcome,<br>
+                        <div class="subTitleForm">
+                            <span>Fill the forms to add a new movie</span>
+                            <button class="buttonConfirm">CLEAN FORM 🗑️</button>
+                        </div>
+                        
+                    </div>
+
+                    <input type="text" placeholder="Movie Title" class="input">
+                    <input type="number" placeholder="Year" class="input">
+                    <input type="text" placeholder="Director" class="input">
+                    <input type="number" placeholder="Duration" class="input">
+                    <input type="text" placeholder="Genre" class="input">
+                    <input type="number" placeholder="Rate 1 to 10" class="input">
+                    <input type="url" placeholder="Poster(URL)" class="input">
+
+                    <div id="buttonForms">
+                        <button class="buttonConfirm">ADD MOVIE </button>
+                        
+                    </div>
+                        
+                </form>
             </section>
 
             <section id="popular">

@@ -13,7 +13,7 @@ const renderFilms = require("./renderCards")
 const axios = require("axios")
 
 const getFilms =()=>{
-    const promiseMovies = axios.get("http://localhost:3000/movies/")
+    const promiseMovies = axios.get("http://localhost:3000/movies")
         promiseMovies
             .then((res)=>{
                 res.data.forEach(renderFilms)

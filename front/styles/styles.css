@@ -2,7 +2,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat+Subrayada:wght@400;700&family=Rubik+Mono+One&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 body{
-    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    --s: 84px;
+    --c1: #ffffff;
+    --c2: #ececec;
+    --c3: #dad8d8;
+
+    --_g: 0 120deg, #0000 0;
+    background: conic-gradient(
+        from 0deg at calc(500% / 6) calc(100% / 3),
+        var(--c3) var(--_g)
+    ),
+    conic-gradient(
+        from -120deg at calc(100% / 6) calc(100% / 3),
+        var(--c2) var(--_g)
+    ),
+    conic-gradient(
+        from 120deg at calc(100% / 3) calc(500% / 6),
+        var(--c1) var(--_g)
+    ),
+    conic-gradient(
+        from 120deg at calc(200% / 3) calc(500% / 6),
+        var(--c1) var(--_g)
+    ),
+    conic-gradient(
+        from -180deg at calc(100% / 3) 50%,
+        var(--c2) 60deg,
+        var(--c1) var(--_g)
+    ),
+    conic-gradient(
+        from 60deg at calc(200% / 3) 50%,
+        var(--c1) 60deg,
+        var(--c3) var(--_g)
+    ),
+    conic-gradient(
+        from -60deg at 50% calc(100% / 3),
+        var(--c1) 120deg,
+        var(--c2) 0 240deg,
+        var(--c3) 0
+    );
+  background-size: calc(var(--s) * 1.732) var(--s);
+
 }
 
 #tituloPrincial{
@@ -14,6 +55,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 
@@ -43,8 +85,10 @@ nav{
     border-radius: 15px;
 }
 #barraDeNavegacionPrincipal{
-    border-bottom: solid 1px rgb(128, 128, 128);
+    border-bottom: solid 1px #ffffff;
     margin-bottom: 0em;
+    background-color: rgba(255, 255, 255, 0.671);
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
 }
 
 #barraDeNavegacionPrincipal ul{
@@ -83,7 +127,7 @@ nav{
     box-sizing: border-box;
     width: 320px;
     height: fit-content;
-    background: rgba(217, 217, 217, 0.58);
+    background: rgba(255, 255, 255, 0.58);
     border: 1px solid white;
     box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
     /* backdrop-filter: blur(6px); */
@@ -153,7 +197,7 @@ footer{
     --bg-color: #fff;
     --main-color: #323232;
     padding: 20px;
-    background: lightgrey;
+    background: rgba(231, 231, 231, 0.774);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -164,6 +208,7 @@ footer{
     box-shadow: 4px 4px var(--main-color);
     margin-left: 16vw;
     margin-right: 16vw;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.599);
 }
 
 .titleForm {

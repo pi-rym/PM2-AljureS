@@ -1,10 +1,18 @@
 const app = require("./src/server.js")
-
 const PORT = 3000
+const { dbConnection } = require('./src/config/dbConnection.js')
 
-app.listen(PORT, ()=>{
-    console.log(`Server for Porject M2 working fine in port ${PORT}`);
-})
+dbConnection()
+    .then((res)=>{
+            app.listen(PORT, ()=>{
+            console.log(`Server for Porject M2 working fine in port ${PORT}`);
+        })
+    })
+    .catch((err)=>{
+        console.log("Hay problemas con la coneccion a la DB");
+    })
+
+
 
 /*
 Implementar los elementos necesarios de manera tal que nuestra aplicación:

@@ -26,7 +26,6 @@ module.exports={
         })
     },
     //Funcon que envie el forms
-
     sendMovie : () => {
         const inputTitle = document.getElementById('inputTitle')
         const inputYear = document.getElementById('inputYear')
@@ -41,16 +40,25 @@ module.exports={
         inputMovie.year = inputYear.value
         inputMovie.director = inputDirector.value
         inputMovie.duration = inputDuration.value
-        inputMovie.genre = inputGenre.value
+        inputMovie.genre = inputGenre.value.split(',')
         inputMovie.rate = inputRate.value
         inputMovie.poster = inputPoster.value
 
-        if (inputTitle.value === '' || inputYear.value === '' || inputDirector.value === '' || inputDuration.value === '' || inputGenre.value === '' || inputRate.value === '' ||inputPoster.value === '' ) {
-            alert('Missing required properties')
-        }else axios.post("http://localhost:3000/movies", inputMovie)
-        
-        
-        
+        if (inputTitle.value === '' ) {
+            alert('Missing movie Title')
+        } else if (inputYear.value === ''){
+            alert('Premier year is required')
+        } else if (inputDirector.value === ''){
+            alert('Missing Director of the movie')
+        } else if (inputDuration.value === ''){
+            alert('Missing duration of the movie')
+        } else if (inputGenre.value === ''){
+            alert('There has to be at least 1 genre')
+        } else if (inputRate.value === ''){
+            alert('Missing movie Rate')
+        } else if (inputPoster.value === '' ){
+            alert('Please add a movie URL')
+        } else axios.post("http://localhost:3000/movies", inputMovie)
     }
 }
 

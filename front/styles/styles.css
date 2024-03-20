@@ -120,6 +120,9 @@ nav{
     display: flex;
     justify-content: space-evenly;
     align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 20px;
+    
 }
 
 .card__content {

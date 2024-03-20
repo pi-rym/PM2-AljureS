@@ -1,20 +1,20 @@
 const axios = require('axios')
 
-class Movie {
-    constructor({ title, year, director, duration, genre, rate, poster }){
-        if (!title || !poster || !director || !duration|| !genre|| !rate|| !year) {
-            alert('Missing required properties')
-            throw new Error('Missing required properties'); // es para parar la app
-        }
-        this.title= title,
-        this.poster = poster,
-        this.year = year,
-        this.director = director,
-        this.duration = duration,
-        this.genre = genre,
-        this.rate = rate
-    }
-}
+// class Movie {
+//     constructor({ title, year, director, duration, genre, rate, poster }){
+//         if (!title || !poster || !director || !duration|| !genre|| !rate|| !year) {
+//             alert('Missing required properties')
+//             throw new Error('Missing required properties'); // es para parar la app
+//         }
+//         this.title= title,
+//         this.poster = poster,
+//         this.year = year,
+//         this.director = director,
+//         this.duration = duration,
+//         this.genre = genre,
+//         this.rate = rate
+//     }
+// }
 
 module.exports={
     //Funcion que vacie el forms
@@ -45,16 +45,11 @@ module.exports={
         inputMovie.rate = inputRate.value
         inputMovie.poster = inputPoster.value
 
-        const promiseSendMovie = axios.post("http://localhost:3000/forms", inputMovie)
-            promiseSendMovie
-                .then ((res)=>{
-                    const newMovie = new Movie(inputMovie)
-                    console.log(newMovie);
-                    emptyForms()
-                })
-                .catch((err)=>{
-                    console.error(err.message);
-                })
+        if (inputTitle.value === '' || inputYear.value === '' || inputDirector.value === '' || inputDuration.value === '' || inputGenre.value === '' || inputRate.value === '' ||inputPoster.value === '' ) {
+            alert('Missing required properties')
+        }else axios.post("http://localhost:3000/movies", inputMovie)
+        
+        
         
     }
 }

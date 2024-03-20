@@ -9,13 +9,23 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./scripts/form.js":
+/*!*************************!*\
+  !*** ./scripts/form.js ***!
+  \*************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("const axios = __webpack_require__(/*! axios */ \"./node_modules/axios/dist/browser/axios.cjs\")\r\n\r\nclass Movie {\r\n    constructor({ title, year, director, duration, genre, rate, poster }){\r\n        if (!title || !poster || !director || !duration|| !genre|| !rate|| !year) {\r\n            alert('Missing required properties')\r\n            throw new Error('Missing required properties'); // es para parar la app\r\n        }\r\n        this.title= title,\r\n        this.poster = poster,\r\n        this.year = year,\r\n        this.director = director,\r\n        this.duration = duration,\r\n        this.genre = genre,\r\n        this.rate = rate\r\n    }\r\n}\r\n\r\nmodule.exports={\r\n    //Funcion que vacie el forms\r\n    emptyForms: () =>{\r\n        const inputs = document.querySelectorAll('#formAddMovie .input')\r\n\r\n        inputs.forEach((input) =>{\r\n            input.value =''\r\n        })\r\n    },\r\n    //Funcon que envie el forms\r\n\r\n    sendMovie : () => {\r\n        const inputTitle = document.getElementById('inputTitle')\r\n        const inputYear = document.getElementById('inputYear')\r\n        const inputDirector = document.getElementById('inputDirector')\r\n        const inputDuration = document.getElementById('inputDuration')\r\n        const inputGenre = document.getElementById('inputGenre')\r\n        const inputRate = document.getElementById('inputRate')\r\n        const inputPoster = document.getElementById('inputPoster')\r\n        \r\n        let inputMovie = {}\r\n        inputMovie.title = inputTitle.value\r\n        inputMovie.year = inputYear.value\r\n        inputMovie.director = inputDirector.value\r\n        inputMovie.duration = inputDuration.value\r\n        inputMovie.genre = inputGenre.value\r\n        inputMovie.rate = inputRate.value\r\n        inputMovie.poster = inputPoster.value\r\n\r\n        const promiseSendMovie = axios.post(\"http://localhost:3000/forms\", inputMovie)\r\n            promiseSendMovie\r\n                .then ((res)=>{\r\n                    const newMovie = new Movie(inputMovie)\r\n                    console.log(newMovie);\r\n                    emptyForms()\r\n                })\r\n                .catch((err)=>{\r\n                    console.error(err.message);\r\n                })\r\n        \r\n    }\r\n}\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://front/./scripts/form.js?");
+
+/***/ }),
+
 /***/ "./scripts/handler.js":
 /*!****************************!*\
   !*** ./scripts/handler.js ***!
   \****************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const renderFilms = __webpack_require__(/*! ./renderCards */ \"./scripts/renderCards.js\")\r\n\r\n/*\r\n    ? Requerir axios en el módulo de JavaSript donde estemos realizando la petición.\r\n\r\n    ?Realizar la petición a la URL que veníamos trabajando utilizando el método get de axios.\r\n\r\n    ? Manejar la asincronía de esta operación utilizando una de las dos estrategias vistas en la clase:\r\n\r\n    ? Promesas, definiendo con el método then un success handler y con método catch un error handler.\r\n\r\n*/\r\nconst axios = __webpack_require__(/*! axios */ \"./node_modules/axios/dist/browser/axios.cjs\")\r\n\r\nconst getFilms =()=>{\r\n    const promiseMovies = axios.get(\"http://localhost:3000/movies\")\r\n        promiseMovies\r\n            .then((res)=>{\r\n                res.data.forEach(renderFilms)\r\n            })\r\n            .catch((err)=>{\r\n                console.error(err.message);\r\n            })\r\n    }\r\n\r\n/*\r\nconst getFilms = async () => {\r\n    try {\r\n        const response = await axios.get(\"http://localhost:3000/movies/\");\r\n        response.data.forEach(renderFilms);\r\n    } catch (err) {\r\n        console.error(err.message);\r\n    }\r\n};\r\n*/\r\n\r\nmodule.exports = getFilms \r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://front/./scripts/handler.js?");
+eval("const renderFilms = __webpack_require__(/*! ./renderCards */ \"./scripts/renderCards.js\")\r\n\r\n/*\r\n    ? Requerir axios en el módulo de JavaSript donde estemos realizando la petición.\r\n\r\n    ?Realizar la petición a la URL que veníamos trabajando utilizando el método get de axios.\r\n\r\n    ? Manejar la asincronía de esta operación utilizando una de las dos estrategias vistas en la clase:\r\n\r\n    ? Promesas, definiendo con el método then un success handler y con método catch un error handler.\r\n\r\n*/\r\nconst axios = __webpack_require__(/*! axios */ \"./node_modules/axios/dist/browser/axios.cjs\")\r\n\r\nconst getFilms =()=>{\r\n    const promiseMovies = axios.get(\"http://localhost:3000/movies\")\r\n        promiseMovies\r\n            .then((res)=>{\r\n                res.data.forEach(renderFilms)\r\n            })\r\n            .catch((err)=>{\r\n                console.error(err.message);\r\n            })\r\n    }\r\n\r\nmodule.exports = getFilms\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n/*\r\nconst getFilms = async () => {\r\n    try {\r\n        const response = await axios.get(\"http://localhost:3000/movies/\");\r\n        response.data.forEach(renderFilms);\r\n    } catch (err) {\r\n        console.error(err.message);\r\n    }\r\n};\r\n*/\r\n\r\n \r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://front/./scripts/handler.js?");
 
 /***/ }),
 
@@ -25,7 +35,7 @@ eval("const renderFilms = __webpack_require__(/*! ./renderCards */ \"./scripts/r
   \**************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const  getFilms  = __webpack_require__(/*! ./handler */ \"./scripts/handler.js\")\r\n\r\ngetFilms()\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://front/./scripts/index.js?");
+eval("const  getFilms  = __webpack_require__(/*! ./handler */ \"./scripts/handler.js\")\r\nconst { emptyForms, sendMovie } = __webpack_require__(/*! ./form */ \"./scripts/form.js\")\r\n\r\ngetFilms()\r\n\r\nconst clearButton = document.getElementById('buttonClear')\r\nclearButton.addEventListener('click', emptyForms)\r\n\r\nconst sendButton = document.getElementById('buttonSend')\r\nsendButton.addEventListener('click', sendMovie)\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://front/./scripts/index.js?");
 
 /***/ }),
 

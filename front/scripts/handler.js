@@ -23,6 +23,27 @@ const getFilms =()=>{
             })
     }
 
+module.exports = getFilms
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 const getFilms = async () => {
     try {
@@ -34,7 +55,7 @@ const getFilms = async () => {
 };
 */
 
-module.exports = getFilms 
+ 
 
 
 

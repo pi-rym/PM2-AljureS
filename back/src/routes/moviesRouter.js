@@ -1,10 +1,11 @@
 const { Router } = require("express")
 const { getMovies, createMovie } = require("../controllers/index")
+const { validateForm } = require("../middleware/validateForms")
 
 const moviesRouter = Router()
 
 moviesRouter.get("/", getMovies)
-moviesRouter.post("/", createMovie)
+moviesRouter.post("/", validateForm , createMovie)
 
 
 module.exports = moviesRouter

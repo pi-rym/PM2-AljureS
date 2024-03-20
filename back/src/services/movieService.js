@@ -6,7 +6,6 @@ module.exports ={
     getServiceMovies: async () =>{
         try {
             const movies = await Movie.find()
-            //// const movieConstructor = movies.data.map((peli) => new Movie(peli))
             return movies
         } catch (error) {
             console.error('no te funciono wey, algo paso en el service ');

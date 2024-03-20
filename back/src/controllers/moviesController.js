@@ -13,7 +13,7 @@ module.exports ={
         
     },
     //función en el controlador de películas que se encargue de desestructurar del body los datos de la película para así llamar a la función del servicio que implementamos en el paso anterior. Que maneje errores de manera tal que si todo salió correctamente, se envíe un mensaje descriptivo al cliente con el status 201. 
-    createMovie : async(req, res) =>{
+    createMovie : async (req, res) =>{
         try {
             const {title, year, director, duration, genre, rate, poster} = req.body
             const newMovie = await serviceCreateMovie({title, year, director, duration, genre, rate, poster})

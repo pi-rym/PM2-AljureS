@@ -1,19 +1,6 @@
 // const axios = require("axios")
-const Movie = require("../models/product")
-// class Movie {
-//     constructor({ title, year, director, duration, genre, rate, poster }){
-//         if (!title || !poster || !director) {
-//             throw new Error('Missing required properties: title, poster or director')
-//         }
-//         this.title= title,
-//         this.poster = poster,
-//         this.year = year,
-//         this.director = director,
-//         this.duration = duration,
-//         this.genre = genre,
-//         this.rate = rate
-//     }
-// }
+
+const Movie = require("../models/Product")
 
 module.exports ={
     getServiceMovies: async () =>{
@@ -24,6 +11,17 @@ module.exports ={
         } catch (error) {
             console.error('no te funciono wey, algo paso en el service ');
         }
+    },
+
+    //función async que reciba por parámetro los datos de las películas y llame al método correspondiente del modelo Movie para crear una nueva película en la base de datos.
+    serviceCreateMovie: async (movie) => {
+        try {
+            const newMovie = await Movie.create(movie)
+            return newMovie
+        } catch (error) {
+            console.error ('Algo paso en el service, no se añadio a la BD')
+        }
+        
     }
 }
 

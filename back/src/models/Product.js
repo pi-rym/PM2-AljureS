@@ -3,7 +3,7 @@
 //Forma que tendran los documentos de una seleccion 
 
 const mongoose = require('mongoose')
-const { Decimal128 } = mongoose.Schema.Types;
+
 
 const movieSchema = new mongoose.Schema({
     title: String,
@@ -11,8 +11,8 @@ const movieSchema = new mongoose.Schema({
     director: String,
     duration: String,
     genre: Array,
-    rate: Decimal128,
-    poster: String
+    poster: String,
+    rate: Number
 }) 
 
 const Movie = mongoose.model("Movie", movieSchema)

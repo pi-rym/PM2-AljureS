@@ -1,14 +1,32 @@
-Proyecto M1: Mis Actividades Favoritas 🌟
-Sobre el Proyecto 📖
-Este proyecto es una web interactiva que permite a los usuarios agregar, visualizar y eliminar sus actividades favoritas. Utiliza tecnologías como HTML, CSS, y JavaScript para proporcionar una experiencia de usuario fluida y dinámica.
+# Cine Voyager Fullstack Project
 
-Características ✨
-Agregar Actividades: Los usuarios pueden añadir nuevas actividades favoritas a la lista.
-Visualizar Actividades: Todas las actividades agregadas se muestran de manera ordenada en la web.
-Eliminar Actividades: Cada actividad puede ser eliminada individualmente.
-Empezando 🚀
-Para obtener una copia local en funcionamiento, sigue estos sencillos pasos.
+Bienvenido al repositorio del proyecto Movie Catalog, una aplicación web fullstack diseñada para permitir a los usuarios explorar, visualizar y añadir películas a un catálogo. Este proyecto está construido usando JavaScript, HTML, y CSS para el frontend, con un backend desarrollado en Node.js y Express, y una base de datos noSQL en MongoDB, todo comunicándose eficientemente mediante solicitudes Axios.
 
-Prerrequisitos 📋
-Navegador web actualizado
-Instalación 🔧
+## Características
+
+- **Explorar Películas**: Visualiza todas las películas disponibles en el catálogo.
+- **Añadir Películas**: Añade nuevas películas al catálogo a través de un formulario interactivo.
+- **Responsive Design**: Disfruta de nuestra aplicación en cualquier dispositivo, gracias a un diseño adaptable.
+
+## Tecnologías Utilizadas
+
+- Frontend: JavaScript, HTML5, CSS3
+- Backend: Node.js, Express
+- Base de Datos: MongoDB
+- Comunicación: Axios para las solicitudes HTTP
+
+## Comenzando
+
+### Prerrequisitos
+
+Antes de comenzar, asegúrate de tener instalado Node.js y MongoDB en tu sistema. También necesitarás npm para instalar las dependencias.
+
+### Instalación
+
+Para poner en marcha el proyecto en tu entorno local, sigue estos pasos:
+
+1. Clona el repositorio a tu máquina local:
+
+```bash
+git clone 
+

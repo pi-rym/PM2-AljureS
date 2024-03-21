@@ -10,7 +10,7 @@ dbConnection()
         })
     })
     .catch((err)=>{
-        console.log("Hay problemas con la coneccion a la DB");
+        console.log("Hay problemas con la coneccion a la DB" );
     })
 
 

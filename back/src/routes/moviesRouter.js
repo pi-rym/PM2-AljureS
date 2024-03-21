@@ -5,7 +5,7 @@ const { validateForm } = require("../middleware/validateForms")
 const moviesRouter = Router()
 
 moviesRouter.get("/", getMovies)
-moviesRouter.post("/", validateForm , createMovie)
+moviesRouter.post("/", validateForm, createMovie)
 
 
 module.exports = moviesRouter

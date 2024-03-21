@@ -1,4 +1,4 @@
-# Cine Voyager Fullstack Project
+# 🍿🌭Cine Voyager Fullstack Project
 
 Bienvenido al repositorio del proyecto Movie Catalog, una aplicación web fullstack diseñada para permitir a los usuarios explorar, visualizar y añadir películas a un catálogo. Este proyecto está construido usando JavaScript, HTML, y CSS para el frontend, con un backend desarrollado en Node.js y Express, y una base de datos noSQL en MongoDB, todo comunicándose eficientemente mediante solicitudes Axios.
 
@@ -28,5 +28,11 @@ Para poner en marcha el proyecto en tu entorno local, sigue estos pasos:
 1. Clona el repositorio a tu máquina local:
 
 ```bash
-git clone 
+git clone: https://github.com/pi-rym/PM2-AljureS.git
+
+### Contacto:
+Email: saidsimon2@gmail.com
+Linkedin: https://www.linkedin.com/in/ing-fullstack-said-aljure-8a0b07179/
+
+
 
